@@ -1,4 +1,4 @@
-# Rules for Cursor
+# Rules for Copilot
 
 ## Architecture & Design
 

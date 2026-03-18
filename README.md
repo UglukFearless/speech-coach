@@ -8,8 +8,8 @@ The application simulates a multi-turn dialogue with a native speaker persona an
 Core loop: user speaks -> STT transcription -> LLM reply and correction -> per-turn score -> TTS voice response.
 
 This repository currently focuses on a local-first MVP:
-- Frontend: Vue 3 (separate app)
-- Backend orchestrator: .NET 8 Web API (separate app)
+- Frontend: Vue 3 application
+- Backend orchestrator: .NET 8 Web API
 - AI services: separate STT, LLM, and TTS services (polyglot allowed)
 - Transport: REST
 - AI runtime baseline: local models via Ollama
@@ -88,13 +88,21 @@ docker compose up --build
 
 ```
 speech-coach/
-├── frontend/         # Vue 3 application
-├── backend/          # .NET 8 orchestrator API + domain services
-├── services/         # STT/LLM/TTS services (language-agnostic)
+├── src/
+│   ├── frontend/     # Vue 3 application
+│   ├── orchestrator/ # .NET 8 orchestrator API + domain services
+│   └── services/     # STT/LLM/TTS services (language-agnostic)
+├── docs/
+│   └── adr/
 ├── docker-compose.yml
 ├── temp/             # Temporary audio files
-└── docs or *.md      # Product/architecture/process documentation
+├── README.md
+├── ARCHITECTURE.md
+├── RULES.md
+└── TODO.md
 ```
+
+Architecture decisions are tracked in `docs/adr`.
 
 ## Contributing
 

@@ -55,6 +55,17 @@ Minimum MVP containers:
 
 All units are composed through Docker Compose in local development.
 
+## Repository Layout Rule
+
+All implementation code is placed under `src/`:
+- `src/frontend`
+- `src/orchestrator`
+- `src/services/stt-service`
+- `src/services/llm-service`
+- `src/services/tts-service`
+
+Documentation and decision records stay outside `src/` (for example: `docs/adr`).
+
 ## Input/Output Formats
 
 ### Audio Input
@@ -163,6 +174,11 @@ Internal service contracts (orchestrator -> AI services):
 - **LLM Service**: assistant reply + improved phrase + score generation.
 - **TTS Service**: assistant reply speech synthesis.
 - **Session Service (inside orchestrator)**: session lifecycle and history queries.
+
+Default code locations:
+- Frontend code: `src/frontend`
+- Orchestrator code: `src/orchestrator`
+- AI service code: `src/services/*`
 
 ### Adapters
 - `ISttProviderAdapter`

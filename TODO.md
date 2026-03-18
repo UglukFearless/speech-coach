@@ -35,7 +35,7 @@
 
 ## In Progress
 
-- [ ] Finalize documentation baseline (README, ARCHITECTURE, RULES, TODO) and remove all placeholders.
+- [ ] Define internal service API artifacts (request/response schema drafts) when implementation starts.
 
 ## Completed
 
@@ -45,6 +45,8 @@
 - [x] Locked scoring decision: per-turn score as integer 0-100.
 - [x] Locked history sidebar fields: datetime, one-line summary, average score, turns count.
 - [x] Locked decomposition direction: .NET orchestrator + separate STT/LLM/TTS services.
+- [x] Added ADR 0001 with accepted architecture and repository layout decisions.
+- [x] Finalized documentation baseline (README, ARCHITECTURE, RULES, TODO) and removed placeholders.
 
 ---
 
